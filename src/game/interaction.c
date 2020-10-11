@@ -1,27 +1,25 @@
-#include <PR/ultratypes.h>
+#include <ultra64.h>
 
-#include "area.h"
-#include "actors/common1.h"
-#include "audio/external.h"
-#include "behavior_actions.h"
-#include "behavior_data.h"
-#include "camera.h"
-#include "course_table.h"
-#include "dialog_ids.h"
-#include "engine/math_util.h"
-#include "engine/surface_collision.h"
-#include "game_init.h"
+#include "sm64.h"
 #include "interaction.h"
+#include "camera.h"
 #include "level_update.h"
-#include "mario.h"
-#include "mario_step.h"
+#include "engine/math_util.h"
 #include "memory.h"
+#include "area.h"
+#include "save_file.h"
+#include "engine/surface_collision.h"
+#include "sound_init.h"
+#include "game_init.h"
+#include "mario.h"
 #include "obj_behaviors.h"
 #include "object_helpers.h"
-#include "save_file.h"
+#include "behavior_actions.h"
+#include "audio/external.h"
+#include "behavior_data.h"
+#include "dialog_ids.h"
 #include "seq_ids.h"
-#include "sm64.h"
-#include "sound_init.h"
+#include "course_table.h"
 #include "thread6.h"
 
 #define INT_GROUND_POUND_OR_TWIRL (1 << 0) // 0x01
@@ -46,6 +44,7 @@
 
 u8 sDelayInvincTimer;
 s16 sInvulnerable;
+extern u8 warp_pipe_seg3_collision_03009AC8[];
 u32 interact_coin(struct MarioState *, u32, struct Object *);
 u32 interact_water_ring(struct MarioState *, u32, struct Object *);
 u32 interact_star_or_key(struct MarioState *, u32, struct Object *);
@@ -132,10 +131,10 @@ static u8 sJustTeleported = FALSE;
 static u8 sPssSlideStarted = FALSE;
 
 /**
- * Returns the type of cap Mario is wearing.
+ * Returns the type of hat Mario is wearing.
  */
 u32 get_mario_cap_flag(struct Object *capObject) {
-    const BehaviorScript *script = virtual_to_segmented(0x13, capObject->behavior);
+    void *script = virtual_to_segmented(0x13, capObject->behavior);
 
     if (script == bhvNormalCap) {
         return MARIO_NORMAL_CAP;
@@ -149,9 +148,8 @@ u32 get_mario_cap_flag(struct Object *capObject) {
 
     return 0;
 }
-
 /**
- * Returns true if the passed in object has a moving angle yaw
+ * Returns true if the passed in object has a moving angle yaw 
  * in the angular range given towards Mario.
  */
 u32 object_facing_mario(struct MarioState *m, struct Object *o, s16 angleRange) {
@@ -341,14 +339,14 @@ void mario_stop_riding_and_holding(struct MarioState *m) {
     }
 }
 
-u32 does_mario_have_normal_cap_on_head(struct MarioState *m) {
-    return (m->flags & (MARIO_CAPS | MARIO_CAP_ON_HEAD)) == (MARIO_NORMAL_CAP | MARIO_CAP_ON_HEAD);
+u32 does_mario_have_hat(struct MarioState *m) {
+    return (m->flags & MARIO_CAP_FLAGS) == (MARIO_NORMAL_CAP | MARIO_CAP_ON_HEAD);
 }
 
 void mario_blow_off_cap(struct MarioState *m, f32 capSpeed) {
     struct Object *capObject;
 
-    if (does_mario_have_normal_cap_on_head(m)) {
+    if (does_mario_have_hat(m)) {
         save_file_set_cap_pos(m->pos[0], m->pos[1], m->pos[2]);
 
         m->flags &= ~(MARIO_NORMAL_CAP | MARIO_CAP_ON_HEAD);
@@ -368,7 +366,7 @@ void mario_blow_off_cap(struct MarioState *m, f32 capSpeed) {
 u32 mario_lose_cap_to_enemy(u32 arg) {
     u32 wasWearingCap = FALSE;
 
-    if (does_mario_have_normal_cap_on_head(gMarioState)) {
+    if (does_mario_have_hat(gMarioState)) {
         save_file_set_flags(arg == 1 ? SAVE_FLAG_CAP_ON_KLEPTO : SAVE_FLAG_CAP_ON_UKIKI);
         gMarioState->flags &= ~(MARIO_NORMAL_CAP | MARIO_CAP_ON_HEAD);
         wasWearingCap = TRUE;
@@ -417,7 +415,7 @@ struct Object *mario_get_collided_object(struct MarioState *m, u32 interactType)
 
 u32 mario_check_object_grab(struct MarioState *m) {
     u32 result = FALSE;
-    const BehaviorScript *script;
+    void *script;
 
     if (m->input & INPUT_INTERACT_OBJ_GRABBABLE) {
         script = virtual_to_segmented(0x13, m->interactObj->behavior);
@@ -639,7 +637,7 @@ void push_mario_out_of_object(struct MarioState *m, struct Object *o, f32 paddin
 
         find_floor(newMarioX, m->pos[1], newMarioZ, &floor);
         if (floor != NULL) {
-            //! Doesn't update Mario's referenced floor (allows oob death when
+            //! Doesn't update mario's referenced floor (allows oob death when
             // an object pushes you into a steep slope while in a ground action)
             m->pos[0] = newMarioX;
             m->pos[2] = newMarioZ;
@@ -703,7 +701,6 @@ u32 take_damage_from_interact_object(struct MarioState *m) {
     queue_rumble_data(5, 80);
 #endif
     set_camera_shake_from_hit(shake);
-
     return damage;
 }
 
@@ -746,8 +743,8 @@ u32 interact_coin(struct MarioState *m, UNUSED u32 interactType, struct Object *
 
     o->oInteractStatus = INT_STATUS_INTERACTED;
 
-    if (COURSE_IS_MAIN_COURSE(gCurrCourseNum) && m->numCoins - o->oDamageOrCoinValue < 100
-        && m->numCoins >= 100) {
+    if (COURSE_IS_MAIN_COURSE(gCurrCourseNum) && m->numCoins - o->oDamageOrCoinValue < 75
+        && m->numCoins >= 75) {
         bhv_spawn_star_no_level_exit(6);
     }
 #ifdef VERSION_SH
@@ -821,6 +818,7 @@ u32 interact_star_or_key(struct MarioState *m, UNUSED u32 interactType, struct O
         play_sound(SOUND_MENU_STAR_SOUND, m->marioObj->header.gfx.cameraToObject);
 #ifndef VERSION_JP
         update_mario_sound_and_camera(m);
+        // func_802521A0
 #endif
 
         if (grandStar) {
@@ -1221,7 +1219,6 @@ u32 interact_clam_or_bubba(struct MarioState *m, UNUSED u32 interactType, struct
     if (!(o->oInteractionSubtype & INT_SUBTYPE_DELAY_INVINCIBILITY)) {
         sDelayInvincTimer = TRUE;
     }
-
     return TRUE;
 }
 
@@ -1297,7 +1294,6 @@ u32 interact_shock(struct MarioState *m, UNUSED u32 interactType, struct Object 
     if (!(o->oInteractionSubtype & INT_SUBTYPE_DELAY_INVINCIBILITY)) {
         sDelayInvincTimer = TRUE;
     }
-
     return FALSE;
 }
 
@@ -1360,7 +1356,6 @@ u32 interact_hit_from_below(struct MarioState *m, UNUSED u32 interactType, struc
     if (!(o->oInteractionSubtype & INT_SUBTYPE_DELAY_INVINCIBILITY)) {
         sDelayInvincTimer = TRUE;
     }
-
     return FALSE;
 }
 
@@ -1398,7 +1393,6 @@ u32 interact_bounce_top(struct MarioState *m, UNUSED u32 interactType, struct Ob
     if (!(o->oInteractionSubtype & INT_SUBTYPE_DELAY_INVINCIBILITY)) {
         sDelayInvincTimer = TRUE;
     }
-
     return FALSE;
 }
 
@@ -1415,7 +1409,6 @@ u32 interact_unknown_08(struct MarioState *m, UNUSED u32 interactType, struct Ob
     if (!(o->oInteractionSubtype & INT_SUBTYPE_DELAY_INVINCIBILITY)) {
         sDelayInvincTimer = TRUE;
     }
-
     return FALSE;
 }
 
@@ -1427,7 +1420,6 @@ u32 interact_damage(struct MarioState *m, UNUSED u32 interactType, struct Object
     if (!(o->oInteractionSubtype & INT_SUBTYPE_DELAY_INVINCIBILITY)) {
         sDelayInvincTimer = TRUE;
     }
-
     return FALSE;
 }
 
@@ -1471,7 +1463,7 @@ u32 interact_koopa_shell(struct MarioState *m, UNUSED u32 interactType, struct O
             play_shell_music();
             mario_drop_held_object(m);
 
-            //! Puts Mario in ground action even when in air, making it easy to
+            //! Puts mario in ground action even when in air, making it easy to
             // escape air actions into crouch slide (shell cancel)
             return set_mario_action(m, ACT_RIDING_SHELL_GROUND, 0);
         }
@@ -1593,17 +1585,17 @@ u32 interact_cap(struct MarioState *m, UNUSED u32 interactType, struct Object *o
         switch (capFlag) {
             case MARIO_VANISH_CAP:
                 capTime = 600;
-                capMusic = SEQUENCE_ARGS(4, SEQ_EVENT_POWERUP);
+                capMusic = SEQUENCE_ARGS(4, SEQ_STREAMED_NEWPOWERUP);
                 break;
 
             case MARIO_METAL_CAP:
                 capTime = 600;
-                capMusic = SEQUENCE_ARGS(4, SEQ_EVENT_METAL_CAP);
+                capMusic = SEQUENCE_ARGS(4, SEQ_STREAMED_NEWMETALCAP);
                 break;
 
             case MARIO_WING_CAP:
                 capTime = 1800;
-                capMusic = SEQUENCE_ARGS(4, SEQ_EVENT_POWERUP);
+                capMusic = SEQUENCE_ARGS(4, SEQ_STREAMED_NEWPOWERUP);
                 break;
         }
 
@@ -1632,7 +1624,7 @@ u32 interact_cap(struct MarioState *m, UNUSED u32 interactType, struct Object *o
 }
 
 u32 interact_grabbable(struct MarioState *m, u32 interactType, struct Object *o) {
-    const BehaviorScript *script = virtual_to_segmented(0x13, o->behavior);
+    void *script = virtual_to_segmented(0x13, o->behavior);
 
     if (o->oInteractionSubtype & INT_SUBTYPE_KICKABLE) {
         u32 interaction = determine_interaction(m, o);
@@ -1660,7 +1652,6 @@ u32 interact_grabbable(struct MarioState *m, u32 interactType, struct Object *o)
     if (script != bhvBowser) {
         push_mario_out_of_object(m, o, -5.0f);
     }
-
     return FALSE;
 }
 
@@ -1676,7 +1667,7 @@ u32 mario_can_talk(struct MarioState *m, u32 arg) {
             return TRUE;
         }
 
-        val6 = m->marioObj->header.gfx.animInfo.animID;
+        val6 = m->marioObj->header.gfx.unk38.animID;
 
         if (val6 == 0x0080 || val6 == 0x007F || val6 == 0x006C) {
             return TRUE;
@@ -1801,7 +1792,7 @@ void mario_process_interactions(struct MarioState *m) {
         m->invincTimer -= 1;
     }
 
-    //! If the kick/punch flags are set and an object collision changes Mario's
+    //! If the kick/punch flags are set and an object collision changes mario's
     // action, he will get the kick/punch wall speed anyway.
     check_kick_or_punch_wall(m);
     m->flags &= ~MARIO_PUNCHING & ~MARIO_KICKING & ~MARIO_TRIPPING;

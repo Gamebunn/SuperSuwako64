@@ -25,3 +25,8 @@
 #include "white_particle/geo.inc.c"
 #include "wooden_signpost/geo.inc.c"
 #include "tree/geo.inc.c"
+
+#include "marios_wing_cap/geo.inc.c"
+#include "marios_cap/geo.inc.c"
+#include "marios_metal_cap/geo.inc.c"
+#include "marios_winged_metal_cap/geo.inc.c"

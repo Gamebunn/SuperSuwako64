@@ -20,7 +20,7 @@ DEFINE_DIALOG(DIALOG_000, 1, 6, 30, 200, _("\
 Wow! You're smack in the\n\
 middle of the battlefield.\n\
 You'll find the Power\n\
-Stars that Bowser stole\n\
+Frogs that Bowser stole\n\
 inside the painting\n\
 worlds.\n\
 First, talk to the\n\
@@ -48,14 +48,14 @@ attack.\n\
 This meadow has become\n\
 a battlefield ever since\n\
 the Big Bob-omb got his\n\
-paws on the Power Star.\n\
-Can you recover the Star\n\
+paws on the Power Frog.\n\
+Can you recover the Frog\n\
 for us? Cross the bridge\n\
 and go left up the path\n\
 to find the Big Bob-omb.\n\
 Please come back to see\n\
 me after you've retrieved\n\
-the Power Star!"))
+the Power Frog!"))
 
 DEFINE_DIALOG(DIALOG_002, 1, 4, 95, 200, _("\
 Hey, you! It's dangerous\n\
@@ -76,14 +76,14 @@ You can talk to us\n\
 whenever you'd like to!"))
 
 DEFINE_DIALOG(DIALOG_003, 1, 5, 95, 200, _("\
-Thank you, Mario! The Big\n\
+Thank you, Suwako! The Big\n\
 Bob-omb is nothing but a\n\
 big dud now! But the\n\
 battle for the castle has\n\
 just begun.\n\
 Other enemies are holding\n\
-the other Power Stars. If\n\
-you recover more Stars,\n\
+the other Power Frogs. If\n\
+you recover more Frogs,\n\
 you can open new doors\n\
 that lead to new worlds!\n\
 My Bob-omb Buddies are\n\
@@ -103,7 +103,7 @@ cannons in this course for\n\
 you to use. Bon Voyage!"))
 
 DEFINE_DIALOG(DIALOG_005, 1, 3, 30, 200, _("\
-Hey, Mario! Is it true\n\
+Hey, Suwako! Is it true\n\
 that you beat the Big\n\
 Bob-omb? Cool!\n\
 You must be strong. And\n\
@@ -143,11 +143,11 @@ Extreme Danger!\n\
 Get close and press [C]^\n\
 for a better look.\n\
 Scary, huh?\n\
-See the Red Coin on top\n\
+See the Red Point on top\n\
 of the stake?\n\
 \n\
 When you collect eight of\n\
-them, a Power Star will\n\
+them, a Power Frog will\n\
 appear in the meadow\n\
 across the bridge."))
 
@@ -156,7 +156,7 @@ Long time, no see! Wow,\n\
 have you gotten fast!\n\
 Have you been training\n\
 on the sly, or is it the\n\
-power of the Stars?\n\
+power of the Frogs?\n\
 I've been feeling down\n\
 about losing the last\n\
 race. This is my home\n\
@@ -185,7 +185,7 @@ DEFINE_DIALOG(DIALOG_011, 1, 4, 30, 200, _("\
 You've just stepped on\n\
 the Metal Cap Switch!\n\
 The Metal Cap makes\n\
-Mario invincible.\n\
+Suwako invincible.\n\
 Now Metal Caps will\n\
 pop out of all of the\n\
 green blocks you find.\n\
@@ -198,7 +198,7 @@ DEFINE_DIALOG(DIALOG_012, 1, 4, 30, 200, _("\
 You've just stepped on\n\
 the Vanish Cap Switch.\n\
 The Vanish Cap makes\n\
-Mario disappear.\n\
+Suwako disappear.\n\
 Now Vanish Caps will pop\n\
 from all of the blue\n\
 blocks you find.\n\
@@ -208,15 +208,15 @@ Would you like to Save?\n\
 //Yes////No"))
 
 DEFINE_DIALOG(DIALOG_013, 1, 5, 30, 200, _("\
-You've collected 100\n\
-coins! Mario gains more\n\
+You've collected 75\n\
+points! Suwako gains more\n\
 power from the castle.\n\
 Do you want to Save?\n\
 //Yes////No"))
 
 DEFINE_DIALOG(DIALOG_014, 1, 4, 30, 200, _("\
-Wow! Another Power Star!\n\
-Mario gains more courage\n\
+Wow! Another Power Frog!\n\
+Suwako gains more courage\n\
 from the power of the\n\
 castle.\n\
 Do you want to Save?\n\
@@ -252,10 +252,10 @@ guards, but you'll never\n\
 escape my grasp...\n\
 \n\
 ...and you'll never take\n\
-away my Power Star. I\n\
+away my Power Frog. I\n\
 hereby challenge you,\n\
-Mario!\n\
-If you want the Star I\n\
+Suwako!\n\
+If you want the Frog I\n\
 hold, you must prove\n\
 yourself in battle.\n\
 \n\
@@ -275,7 +275,7 @@ Shhh! Please walk\n\
 quietly in the hallway!"))
 
 DEFINE_DIALOG(DIALOG_020, 1, 6, 95, 150, _("\
-Dear Mario:\n\
+Dear Suwako:\n\
 Please come to the\n\
 castle. I've baked\n\
 a cake for you.\n\
@@ -299,47 +299,47 @@ Maybe it's for the\n\
 basement..."))
 
 DEFINE_DIALOG(DIALOG_024, 1, 5, 95, 200, _("\
-You need Star power to\n\
+You need Frog power to\n\
 open this door. Recover a\n\
-Power Star from an enemy\n\
+Power Frog from an enemy\n\
 inside one of the castle's\n\
 paintings."))
 
 DEFINE_DIALOG(DIALOG_025, 1, 4, 95, 200, _("\
 It takes the power of\n\
-3 Stars to open this\n\
+3 Frogs to open this\n\
 door. You need [%] more\n\
-Stars."))
+Frogs."))
 
 DEFINE_DIALOG(DIALOG_026, 1, 4, 95, 200, _("\
 It takes the power of\n\
-8 Stars to open this\n\
+8 Frogs to open this\n\
 door. You need [%] more\n\
-Stars."))
+Frogs."))
 
 DEFINE_DIALOG(DIALOG_027, 1, 4, 95, 200, _("\
 It takes the power of\n\
-30 Stars to open this\n\
+30 Frogs to open this\n\
 door. You need [%] more\n\
-Stars."))
+Frogs."))
 
 DEFINE_DIALOG(DIALOG_028, 1, 4, 95, 200, _("\
 It takes the power of\n\
-50 Stars to open this\n\
+50 Frogs to open this\n\
 door. You need [%] more\n\
-Stars."))
+Frogs."))
 
 DEFINE_DIALOG(DIALOG_029, 1, 5, 95, 200, _("\
 To open the door that\n\
 leads to the 『endless』\n\
 stairs, you need 70\n\
-Stars.\n\
+Frogs.\n\
 Bwa ha ha!"))
 
 DEFINE_DIALOG(DIALOG_030, 1, 6, 30, 200, _("\
 Hello! The Lakitu Bros.,\n\
 cutting in with a live\n\
-update on Mario's\n\
+update on Suwako's\n\
 progress. He's about to\n\
 learn a technique for\n\
 sneaking up on enemies.\n\
@@ -368,9 +368,9 @@ my entire savings on\n\
 these new Koopa\n\
 Mach 1 Sprint shoes!\n\
 Here, I guess I have to\n\
-hand over this Star to\n\
+hand over this Frog to\n\
 the winner of the race.\n\
-Congrats, Mario!"))
+Congrats, Suwako!"))
 
 DEFINE_DIALOG(DIALOG_032, 1, 5, 30, 200, _("\
 If you get the Wing Cap,\n\
@@ -397,7 +397,7 @@ jump and [B] to attack.\n\
 Press [B] to read signs,\n\
 too. Use the Control Stick\n\
 in the center of the\n\
-controller to move Mario\n\
+controller to move Suwako\n\
 around. Now, head for\n\
 the castle."))
 
@@ -408,12 +408,12 @@ reporting live from just\n\
 outside the Princess's\n\
 castle.\n\
 \n\
-Mario has just arrived\n\
+Suwako has just arrived\n\
 on the scene, and we'll\n\
 be filming the action live\n\
 as he enters the castle\n\
 and pursues the missing\n\
-Power Stars.\n\
+Power Frogs.\n\
 As seasoned cameramen,\n\
 we'll be shooting from the\n\
 recommended angle, but\n\
@@ -442,7 +442,7 @@ There are four camera, or\n\
 to look around using the\n\
 Control Stick.\n\
 \n\
-You'll usually see Mario\n\
+You'll usually see Suwako\n\
 through Lakitu's camera.\n\
 It is the camera\n\
 recommended for normal\n\
@@ -450,13 +450,13 @@ play.\n\
 You can change angles by\n\
 pressing [C]>. If you press\n\
 [R], the view switches to\n\
-Mario's camera, which\n\
+Suwako's camera, which\n\
 is directly behind him.\n\
 Press [R] again to return\n\
 to Lakitu's camera. Press\n\
-[C]| to see Mario from\n\
+[C]| to see Suwako from\n\
 afar, using either\n\
-Lakitu's or Mario's view."))
+Lakitu's or Suwako's view."))
 
 DEFINE_DIALOG(DIALOG_036, 1, 5, 30, 200, _("\
 OBSERVATION PLATFORM\n\
@@ -465,8 +465,8 @@ around. Don't miss\n\
 anything!\n\
 \n\
 Press [R] to switch to\n\
-Mario's camera. It\n\
-always follows Mario.\n\
+Suwako's camera. It\n\
+always follows Suwako.\n\
 Press [R] again to switch\n\
 to Lakitu's camera.\n\
 Pause the game and\n\
@@ -482,7 +482,7 @@ a better sledder!\n\
 Better luck next time!"))
 
 DEFINE_DIALOG(DIALOG_038, 1, 3, 95, 200, _("\
-Reacting to the Star\n\
+Reacting to the Frog\n\
 power, the door slowly\n\
 opens."))
 
@@ -492,7 +492,7 @@ by decree of\n\
 the Big Bob-omb\n\
 \n\
 I shall never surrender my\n\
-Stars, for they hold the\n\
+Frogs, for they hold the\n\
 power of the castle in\n\
 their glow.\n\
 They were a gift from\n\
@@ -503,7 +503,7 @@ Not a whisper of their\n\
 whereabouts shall leave\n\
 my lips. Oh, all right,\n\
 perhaps one hint:\n\
-Heed the Star names at\n\
+Heed the Frog names at\n\
 the beginning of the\n\
 course.\n\
 //--The Big Bob-omb"))
@@ -534,7 +534,7 @@ edge if you move slowly.\n\
 When you want to let go,\n\
 either press [Z] or press\n\
 the Control Stick in the\n\
-direction of Mario's back.\n\
+direction of Suwako's back.\n\
 To climb up, press Up on\n\
 the Control Stick. To\n\
 scurry up quickly, press\n\
@@ -567,7 +567,7 @@ grab on."))
 DEFINE_DIALOG(DIALOG_045, 1, 6, 95, 200, _("\
 Whew! I'm just about\n\
 flapped out. You should\n\
-lay off the pasta, Mario!\n\
+lay off the pasta, Suwako!\n\
 That's it for now. Press\n\
 [A] to let go. Okay,\n\
 bye byyyyyyeeee!"))
@@ -667,12 +667,12 @@ air with both jumps."))
 
 DEFINE_DIALOG(DIALOG_053, 1, 5, 30, 200, _("\
 Sometimes, if you pass\n\
-through a coin ring or\n\
+through a point ring or\n\
 find a secret point in a\n\
 course, a red number will\n\
 appear.\n\
 If you trigger five red\n\
-numbers, a secret Star\n\
+numbers, a secret Frog\n\
 will show up."))
 
 DEFINE_DIALOG(DIALOG_054, 1, 5, 30, 200, _("\
@@ -683,7 +683,7 @@ Control Stick. To slow\n\
 down, pull back."))
 
 DEFINE_DIALOG(DIALOG_055, 1, 4, 30, 200, _("\
-Hey-ey, Mario, buddy,\n\
+Hey-ey, Suwako, buddy,\n\
 howzit goin'? Step right\n\
 up. You look like a fast\n\
 sleddin' kind of guy.\n\
@@ -705,7 +705,7 @@ that you're also the\n\
 fastest!\n\
 I can't award you a gold\n\
 medal, but here, take this\n\
-Star instead. You've\n\
+Frog instead. You've\n\
 earned it!"))
 
 DEFINE_DIALOG(DIALOG_057, 1, 4, 30, 200, _("\
@@ -726,9 +726,9 @@ DEFINE_DIALOG(DIALOG_058, 1, 4, 30, 200, _("\
 You found my precious,\n\
 precious baby! Where\n\
 have you been? How can\n\
-I ever thank you, Mario?\n\
+I ever thank you, Suwako?\n\
 Oh, I do have this...\n\
-...Star. Here, take it\n\
+...Frog. Here, take it\n\
 with my eternal\n\
 gratitude."))
 
@@ -749,7 +749,7 @@ run out of oxygen.\n\
 \n\
 Return to the surface for\n\
 air or find an air bubble\n\
-or coins to breathe while\n\
+or points to breathe while\n\
 underwater.\n\
 Press [A] to swim. Hold [A]\n\
 to swim slow and steady.\n\
@@ -804,7 +804,7 @@ red block, do the Triple\n\
 Jump to soar high into\n\
 the sky.\n\
 Use the Control Stick to\n\
-guide Mario. Pull back to\n\
+guide Suwako. Pull back to\n\
 to fly up, press forward\n\
 to nose down, and press [Z]\n\
 to land."))
@@ -829,7 +829,7 @@ Easy as pie, right?\n\
 \n\
 \n\
 But remember:\n\
-Mario can't breathe under\n\
+Suwako can't breathe under\n\
 the water! Return to the\n\
 surface for air when the\n\
 Power Meter runs low.\n\
@@ -839,7 +839,7 @@ can't open doors that\n\
 are underwater."))
 
 DEFINE_DIALOG(DIALOG_066, 1, 5, 30, 200, _("\
-Mario, it's Peach!\n\
+Suwako, it's Peach!\n\
 Please be careful! Bowser\n\
 is so wicked! He will try\n\
 to burn you with his\n\
@@ -855,17 +855,17 @@ The faster you swing him,\n\
 the farther he'll fly.\n\
 \n\
 Use the [C] Buttons to look\n\
-around, Mario. You have\n\
+around, Suwako. You have\n\
 to throw Bowser into one\n\
 of the bombs in the four\n\
 corners.\n\
 Aim well, then press [B]\n\
 again to launch Bowser.\n\
-Good luck, Mario! Our\n\
+Good luck, Suwako! Our\n\
 fate is in your hands."))
 
 DEFINE_DIALOG(DIALOG_067, 1, 5, 30, 200, _("\
-Tough luck, Mario!\n\
+Tough luck, Suwako!\n\
 Princess Toadstool isn't\n\
 here...Gwa ha ha!! Go\n\
 ahead--just try to grab\n\
@@ -882,7 +882,7 @@ into a pool of flames,\n\
 you'll be hopping mad, but\n\
 don't lose your cool.\n\
 You can still control\n\
-Mario--just try to keep\n\
+Suwako--just try to keep\n\
 calm!"))
 
 DEFINE_DIALOG(DIALOG_069, 1, 6, 30, 200, _("\
@@ -900,12 +900,12 @@ time from the painting\n\
 worlds where the enemies\n\
 live.\n\
 Just stop, stand still,\n\
-press Start to pause the\n\
+press Frogt to pause the\n\
 game, then select\n\
 『Exit Course.』\n\
 \n\
 You don't have to collect\n\
-all Power Stars in one\n\
+all Power Frogs in one\n\
 course before going on to\n\
 the next.\n\
 \n\
@@ -914,14 +914,14 @@ more experienced, to pick\n\
 up difficult ones.\n\
 \n\
 \n\
-Whenever you find a Star,\n\
+Whenever you find a Frog,\n\
 a hint for finding the\n\
 next one will appear on\n\
 the course's start screen.\n\
 \n\
 You can, however, collect\n\
 any of the remaining\n\
-Stars next. You don't\n\
+Frogs next. You don't\n\
 have to recover the one\n\
 described by the hint."))
 
@@ -968,7 +968,7 @@ hang down from it.\n\
 To drop from the edge,\n\
 either press the Control\n\
 Stick in the direction of\n\
-Mario's back or press the\n\
+Suwako's back or press the\n\
 [Z] Button.\n\
 To get up onto the ledge,\n\
 either press Up on the\n\
@@ -977,7 +977,7 @@ as soon as you grab the\n\
 ledge to climb up quickly."))
 
 DEFINE_DIALOG(DIALOG_075, 1, 5, 30, 200, _("\
-Mario!! My castle is in\n\
+Suwako!! My castle is in\n\
 great peril. I know that\n\
 Bowser is the cause...and\n\
 I know that only you can\n\
@@ -985,7 +985,7 @@ stop him!\n\
 The doors in the castle\n\
 that have been sealed by\n\
 Bowser can be opened only\n\
-with Star Power.\n\
+with Frog Power.\n\
 \n\
 But there are secret\n\
 paths in the castle,\n\
@@ -995,50 +995,37 @@ found.\n\
 One of those paths is in\n\
 this room, and it holds\n\
 one of the castle's Secret\n\
-Stars!\n\
+Frogs!\n\
 \n\
-Find that Secret Star,\n\
-Mario! It will help you\n\
+Find that Secret Frog,\n\
+Suwako! It will help you\n\
 on your quest. Please,\n\
-Mario, you have to\n\
+Suwako, you have to\n\
 help us!\n\
 Retrieve all of the\n\
-Power Stars in the castle\n\
+Power Frogs in the castle\n\
 and free us from this\n\
 awful prison!\n\
 Please!"))
 
-DEFINE_DIALOG(DIALOG_076, 1, 6, 30, 200, _("\
-Thanks to the power of\n\
-the Stars, life is\n\
-returning to the castle.\n\
-Please, Mario, you have\n\
-to give Bowser the boot!\n\
+DEFINE_DIALOG(DIALOG_076, 1, 2, 150, 200, _("\
+Hey Suwako...\n\
 \n\
-Here, let me tell you a\n\
-little something about the\n\
-castle. In the room with\n\
-the mirrors, look carefully\n\
-for anything that's not\n\
-reflected in the mirror.\n\
-And when you go to the\n\
-water town, you can flood\n\
-it with a high jump into\n\
-the painting. Oh, by the\n\
-way, look what I found!"))
+Can you ask Kanako\n\
+to step on me?"))
 
 DEFINE_DIALOG(DIALOG_077, 1, 2, 150, 200, _("\
 It is decreed that one\n\
 shall pound the pillars."))
 
 DEFINE_DIALOG(DIALOG_078, 1, 5, 30, 200, _("\
-Break open the Blue Coin\n\
+Break open the Green Point\n\
 Block by Pounding the\n\
 Ground with the [Z] Button.\n\
-One Blue Coin is worth\n\
-five Yellow Coins.\n\
+One Green Point is worth\n\
+five Blue Points.\n\
 But you have to hurry!\n\
-The coins will disappear\n\
+The points will disappear\n\
 if you're not quick to\n\
 collect them! Too bad."))
 
@@ -1067,35 +1054,16 @@ The city welcomes visitors\n\
 with the depth they bring\n\
 as they enter."))
 
-DEFINE_DIALOG(DIALOG_082, 1, 4, 30, 200, _("\
-Hold on to your hat! If\n\
-you lose it, you'll be\n\
-injured easily.\n\
+DEFINE_DIALOG(DIALOG_082, 1, 2, 150, 200, _("\
+Hey Suwako...\n\
 \n\
-If you do lose your Cap,\n\
-you'll have to find it in\n\
-the course where you\n\
-lost it.\n\
-Oh, boy, it's not looking\n\
-good for Peach. She's\n\
-still trapped somewhere\n\
-inside the walls.\n\
-Please, Mario, you have\n\
-to help her! Did you know\n\
-that there are enemy\n\
-worlds inside the walls?\n\
-Yup. It's true. Bowser's\n\
-troops are there, too.\n\
-Oh, here, take this. I've\n\
-been keeping it for you."))
+Can you ask Sanae to\n\
+do my homework?"))
 
-DEFINE_DIALOG(DIALOG_083, 1, 6, 30, 200, _("\
-There's something strange\n\
-about that clock. As you\n\
-jump inside, watch the\n\
-position of the big hand.\n\
-Oh, look what I found!\n\
-Here, Mario, catch!"))
+DEFINE_DIALOG(DIALOG_083, 1, 2, 150, 200, _("\
+Hey Suwako...\n\
+\n\
+Is the hat alive?"))
 
 DEFINE_DIALOG(DIALOG_084, 1, 3, 30, 200, _("\
 Yeeoww! Unhand me,\n\
@@ -1167,21 +1135,21 @@ comfy ride."))
 
 DEFINE_DIALOG(DIALOG_092, 1, 5, 30, 200, _("\
 Pestering me again, are\n\
-you, Mario? Can't you see\n\
+you, Suwako? Can't you see\n\
 that I'm having a merry\n\
 little time, making\n\
 mischief with my minions?\n\
-Now, return those Stars!\n\
+Now, return those Frogs!\n\
 My troops in the walls\n\
 need them! Bwa ha ha!"))
 
 DEFINE_DIALOG(DIALOG_093, 1, 5, 30, 200, _("\
-Mario! You again! Well\n\
+Suwako! You again! Well\n\
 that's just fine--I've\n\
 been looking for something\n\
 to fry with my fire\n\
 breath!\n\
-Your Star Power is\n\
+Your Frog Power is\n\
 useless against me!\n\
 Your friends are all\n\
 trapped within the\n\
@@ -1205,7 +1173,7 @@ When you want to talk to\n\
 a Koopa Troopa or other\n\
 animal, stand right in\n\
 front of it.\n\
-Please recover the Stars\n\
+Please recover the Frogs\n\
 that were stolen by\n\
 Bowser in this course."))
 
@@ -1274,17 +1242,17 @@ Then at the peak\n\
 shall shine the light..."))
 
 DEFINE_DIALOG(DIALOG_104, 1, 5, 30, 200, _("\
-The shadowy star in front\n\
-of you is a 『Star\n\
+The shadowy Tailsman in front\n\
+of you is a 『Frog\n\
 Marker.』 When you collect\n\
-all 8 Red Coins, the Star\n\
+all 8 Red Points, the Frog\n\
 will appear here."))
 
 DEFINE_DIALOG(DIALOG_105, 1, 3, 95, 200, _("\
 Ready for blastoff! Come\n\
 on, hop into the cannon!\n\
 \n\
-You can reach the Star on\n\
+You can reach the Frog on\n\
 the floating island by\n\
 using the four cannons.\n\
 Use the Control Stick to\n\
@@ -1339,12 +1307,12 @@ present for you. It's sure\n\
 to warm you up."))
 
 DEFINE_DIALOG(DIALOG_112, 1, 4, 30, 200, _("\
-Collect as many coins as\n\
+Collect as many points as\n\
 possible! They'll refill\n\
 your Power Meter.\n\
 \n\
 You can check to see how\n\
-many coins you've\n\
+many points you've\n\
 collected in each of the\n\
 15 enemy worlds.\n\
 You can also recover\n\
@@ -1398,11 +1366,11 @@ if you want to take King\n\
 Bowser by the tail.\n\
 Methinks my troops could\n\
 learn a lesson from you!\n\
-Here is your Star, as I\n\
-promised, Mario.\n\
+Here is your Frog, as I\n\
+promised, Suwako.\n\
 \n\
 If you want to see me\n\
-again, select this Star\n\
+again, select this Tailsman\n\
 from the menu. For now,\n\
 farewell."))
 
@@ -1425,7 +1393,7 @@ We...crushed like pebble.\n\
 You so strong!\n\
 You rule ancient pyramid!\n\
 For today...\n\
-Now, take Star of Power.\n\
+Now, take Frog of Power.\n\
 We...sleep...darkness."))
 
 DEFINE_DIALOG(DIALOG_119, 1, 6, 30, 200, _("\
@@ -1433,10 +1401,10 @@ Grrr! I was a bit\n\
 careless. This is not as I\n\
 had planned...but I still\n\
 hold the power of the\n\
-Stars, and I still have\n\
+Frogs, and I still have\n\
 Peach.\n\
 Bwa ha ha! You'll get no\n\
-more Stars from me! I'm\n\
+more Frogs from me! I'm\n\
 not finished with you yet,\n\
 but I'll let you go for\n\
 now. You'll pay for this...\n\
@@ -1445,7 +1413,7 @@ later!"))
 DEFINE_DIALOG(DIALOG_120, 1, 4, 30, 200, _("\
 Ooowaah! Can it be that\n\
 I've lost??? The power of\n\
-the Stars has failed me...\n\
+the Frogs has failed me...\n\
 this time.\n\
 Consider this a draw.\n\
 Next time, I'll be in\n\
@@ -1461,7 +1429,7 @@ Gwa ha ha ha!"))
 DEFINE_DIALOG(DIALOG_121, 1, 5, 30, 200, _("\
 Nooo! It can't be!\n\
 You've really beaten me,\n\
-Mario?!! I gave those\n\
+Suwako?!! I gave those\n\
 troops power, but now\n\
 it's fading away!\n\
 Arrgghh! I can see peace\n\
@@ -1565,7 +1533,7 @@ just as you would when\n\
 flying an airplane."))
 
 DEFINE_DIALOG(DIALOG_132, 1, 4, 30, 200, _("\
-Whoa, Mario, pal, you\n\
+Whoa, Suwako, pal, you\n\
 aren't trying to cheat,\n\
 are you? Shortcuts aren't\n\
 allowed.\n\
@@ -1575,20 +1543,32 @@ disqualified! Next time,\n\
 play fair!"))
 
 DEFINE_DIALOG(DIALOG_133, 1, 6, 30, 200, _("\
-Am I glad to see you! The\n\
-Princess...and I...and,\n\
+Am I glad to see- wait a\n\
+minute. Who is this \n\
+weebaboo TRASH in front\n\ 
+of me??\n\
+\n\
+\n\
+Well, no time to complain. \n\
+Mario never showed up so \n\
+I guess you'll have \n\
+to do. \n\
+\n\
+\n\
+The Princess...and I...and,\n\
 well, everybody...we're all\n\
 trapped inside the castle\n\
 walls.\n\
 \n\
+\n\
 Bowser has stolen the\n\
-castle's Stars, and he's\n\
+castle's Frogs, and he's\n\
 using their power to\n\
 create his own world in\n\
 the paintings and walls.\n\
 \n\
 Please recover the Power\n\
-Stars! As you find them,\n\
+Frogs! As you find them,\n\
 you can use their power\n\
 to open the doors that\n\
 Bowser has sealed.\n\
@@ -1600,40 +1580,40 @@ of Bob-omb inside. It's\n\
 the only room that Bowser\n\
 hasn't sealed.\n\
 When you collect eight\n\
-Power Stars, you'll be\n\
+Power Frogs, you'll be\n\
 able to open the door\n\
-with the big star. The\n\
+with the big frog. The\n\
 Princess must be inside!"))
 
 DEFINE_DIALOG(DIALOG_134, 1, 5, 30, 200, _("\
-The names of the Stars\n\
+The names of the Frogs\n\
 are also hints for\n\
 finding them. They are\n\
 displayed at the beginning\n\
 of each course.\n\
-You can collect the Stars\n\
+You can collect the Frogs\n\
 in any order. You won't\n\
-find some Stars, enemies\n\
+find some Frogs, enemies\n\
 or items unless you select\n\
-a specific Star.\n\
+a specific Frog.\n\
 After you collect some\n\
-Stars, you can try\n\
+Frogs, you can try\n\
 another course.\n\
 We're all waiting for\n\
 your help!"))
 
 DEFINE_DIALOG(DIALOG_135, 1, 5, 30, 200, _("\
 It was Bowser who stole\n\
-the Stars. I saw him with\n\
+the Frogs. I saw him with\n\
 my own eyes!\n\
 \n\
 \n\
-He's hidden six Stars in\n\
+He's hidden six Frogs in\n\
 each course, but you\n\
 won't find all of them in\n\
 some courses until you\n\
 press the Cap Switches.\n\
-The Stars you've found\n\
+The Frogs you've found\n\
 will show on each course's\n\
 starting screen.\n\
 \n\
@@ -1641,13 +1621,13 @@ starting screen.\n\
 If you want to see some\n\
 of the enemies you've\n\
 already defeated, select\n\
-the Stars you recovered\n\
+the Frogs you recovered\n\
 from them."))
 
 DEFINE_DIALOG(DIALOG_136, 1, 6, 30, 200, _("\
 Wow! You've already\n\
 recovered that many\n\
-Stars? Way to go, Mario!\n\
+Frogs? Way to go, Suwako!\n\
 I'll bet you'll have us out\n\
 of here in no time!\n\
 \n\
@@ -1656,16 +1636,16 @@ Bowser and his band\n\
 wrote the book on 『bad.』\n\
 Take my advice: When you\n\
 need to recover from\n\
-injuries, collect coins.\n\
-Yellow Coins refill one\n\
+injuries, collect points.\n\
+Blue points refill one\n\
 piece of the Power Meter,\n\
-Red Coins refill two\n\
-pieces, and Blue Coins\n\
+Red points refill two\n\
+pieces, and Green points\n\
 refill five.\n\
 \n\
-To make Blue Coins\n\
-appear, pound on Blue\n\
-Coin Blocks.\n\
+To make Green Points\n\
+appear, pound on Green\n\
+Point Blocks.\n\
 \n\
 \n\
 \n\
@@ -1676,16 +1656,16 @@ Pound the Ground as you\n\
 land."))
 
 DEFINE_DIALOG(DIALOG_137, 1, 6, 30, 200, _("\
-Thanks, Mario! The castle\n\
+Thanks, Suwako! The castle\n\
 is recovering its energy\n\
 as you retrieve Power\n\
-Stars, and you've chased\n\
+Frogs, and you've chased\n\
 Bowser right out of here,\n\
 on to some area ahead.\n\
 Oh, by the by, are you\n\
-collecting coins? Special\n\
-Stars appear when you\n\
-collect 100 coins in each\n\
+collecting points? Special\n\
+Frogs appear when you\n\
+collect 75 points in each\n\
 of the 15 courses!"))
 
 DEFINE_DIALOG(DIALOG_138, 1, 3, 30, 200, _("\
@@ -1711,7 +1691,7 @@ Arrow: You are here"))
 
 DEFINE_DIALOG(DIALOG_141, 1, 5, 150, 200, _("\
 You've recovered one of\n\
-the stolen Power Stars!\n\
+the stolen Power Frogs!\n\
 Now you can open some of\n\
 the sealed doors in the\n\
 castle.\n\
@@ -1723,14 +1703,14 @@ Fortress on Floor 1.\n\
 Bowser's troops are still\n\
 gaining power, so you\n\
 can't give up. Save us,\n\
-Mario! Keep searching for\n\
-Stars!"))
+Suwako! Keep searching for\n\
+Frogs!"))
 
 DEFINE_DIALOG(DIALOG_142, 1, 5, 150, 200, _("\
 You've recovered three\n\
-Power Stars! Now you can\n\
+Power Frogs! Now you can\n\
 open any door with a 3\n\
-on its star.\n\
+on its frog.\n\
 \n\
 You can come and go from\n\
 the open courses as you\n\
@@ -1740,17 +1720,17 @@ careful!"))
 
 DEFINE_DIALOG(DIALOG_143, 1, 6, 150, 200, _("\
 You've recovered eight of\n\
-the Power Stars! Now you\n\
+the Power Frogs! Now you\n\
 can open the door with\n\
-the big Star! But Bowser\n\
+the big Frog! But Bowser\n\
 is just ahead...can you\n\
 hear the Princess calling?"))
 
 DEFINE_DIALOG(DIALOG_144, 1, 6, 150, 200, _("\
 You've recovered 30\n\
-Power Stars! Now you can\n\
+Power Frogs! Now you can\n\
 open the door with the\n\
-big Star! But before you\n\
+big Frog! But before you\n\
 move on, how's it going\n\
 otherwise?\n\
 Did you pound the two\n\
@@ -1767,8 +1747,8 @@ cornered him?"))
 
 DEFINE_DIALOG(DIALOG_145, 1, 6, 150, 200, _("\
 You've recovered 50\n\
-Power Stars! Now you can\n\
-open the Star Door on the\n\
+Power Frogs! Now you can\n\
+open the Frog Door on the\n\
 third floor. Bowser's\n\
 there, you know.\n\
 \n\
@@ -1783,7 +1763,7 @@ third floor is just ahead."))
 
 DEFINE_DIALOG(DIALOG_146, 1, 6, 150, 200, _("\
 You've found 70 Power\n\
-Stars! The mystery of the\n\
+Frogs! The mystery of the\n\
 endless stairs is solved,\n\
 thanks to you--and is\n\
 Bowser ever upset! Now,\n\
@@ -1803,7 +1783,7 @@ hidden courses.\n\
 You'll find the hidden\n\
 courses only after\n\
 regaining some of the\n\
-Power Stars.\n\
+Power Frogs.\n\
 \n\
 The Cap Blocks are a big\n\
 help! Red for the Wing\n\
@@ -1829,14 +1809,14 @@ DEFINE_DIALOG(DIALOG_149, 1, 3, 30, 200, _("\
 Welcome to\n\
 Princess Toadstool's\n\
 secret slide!\n\
-There's a Star hidden\n\
+There's a Frog hidden\n\
 here that Bowser couldn't\n\
 find.\n\
 When you slide, press\n\
 forward to speed up,\n\
 pull back to slow down.\n\
 If you slide really\n\
-fast, you'll win the Star!"))
+fast, you'll win the Frog!"))
 
 DEFINE_DIALOG(DIALOG_150, 1, 5, 30, 200, _("\
 Waaaa! You've flooded my\n\
@@ -1851,7 +1831,7 @@ huff...it makes me so...\n\
 MAD!!!\n\
 Everything's been going\n\
 wrong ever since I got\n\
-this Star...It's so shiny,\n\
+this Frog...It's so shiny,\n\
 but it makes me feel...\n\
 strange..."))
 
@@ -1867,7 +1847,7 @@ Waaaaaaaaaaaaaaaaa!!!"))
 DEFINE_DIALOG(DIALOG_152, 1, 3, 30, 200, _("\
 Owwch! Uncle! Uncle!\n\
 Okay, I " GIVE_UP ". Take this\n\
-Star!\n\
+Frog!\n\
 Whew! I feel better now.\n\
 I don't really need it\n\
 anymore, anyway--\n\
@@ -1887,46 +1867,22 @@ Whatever it is, it's\n\
 bugging me! I think I'll\n\
 blow it away!"))
 
-DEFINE_DIALOG(DIALOG_154, 1, 5, 30, 200, _("\
-Hold on to your hat! If\n\
-you lose it, you'll be\n\
-easily injured. If you\n\
-lose it, look for it in the\n\
-course where you lost it.\n\
-Speaking of lost, the\n\
-Princess is still stuck in\n\
-the walls somewhere.\n\
-Please help, Mario!\n\
+DEFINE_DIALOG(DIALOG_154, 1, 2, 150, 200, _("\
+Hey Suwako...\n\
 \n\
-Oh, you know that there\n\
-are secret worlds in the\n\
-walls as well as in the\n\
-paintings, right?"))
+Can you ask Sanae to\n\
+do my homework?"))
 
-DEFINE_DIALOG(DIALOG_155, 1, 6, 30, 200, _("\
-Thanks to the power of\n\
-the Stars, life is\n\
-returning to the castle.\n\
-Please, Mario, you have\n\
-to give Bowser the boot!\n\
+DEFINE_DIALOG(DIALOG_155, 1, 2, 150, 200, _("\
+Hey Suwako...\n\
 \n\
-Here, let me tell you a\n\
-little something about the\n\
-castle. In the room with\n\
-the mirrors, look carefully\n\
-for anything that's not\n\
-reflected in the mirror.\n\
-And when you go to the\n\
-water town, you can flood\n\
-it with a high jump into\n\
-the painting."))
+Can you ask Kanako\n\
+to step on me?"))
 
-DEFINE_DIALOG(DIALOG_156, 1, 5, 30, 200, _("\
-The world inside the\n\
-clock is so strange!\n\
-When you jump inside,\n\
-watch the position of\n\
-the big hand!"))
+DEFINE_DIALOG(DIALOG_156, 1, 2, 150, 200, _("\
+Hey Suwako...\n\
+\n\
+Is the hat alive?"))
 
 DEFINE_DIALOG(DIALOG_157, 1, 5, 30, 200, _("\
 Watch out! Don't let\n\
@@ -1981,29 +1937,26 @@ Enjoy!!!"
 #endif
 
 DEFINE_DIALOG(DIALOG_161, 1, 4, 30, 200, _("\
-Mario!!!\n\
-It that really you???\n\
-It has been so long since\n\
-our last adventure!\n\
-They told me that I might\n\
-see you if I waited here,\n\
-but I'd just about given\n\
-up hope!\n\
-Is it true? Have you\n\
-really beaten Bowser? And\n\
-restored the Stars to the\n\
-castle?\n\
-And saved the Princess?\n\
-I knew you could do it!\n\
-Now I have a very special\n\
-message for you.\n\
-『Thanks for playing Super\n\
-Mario 64! This is the\n\
-end of the game, but not\n\
-the end of the fun." \
-KEEP_ON_PLAYING "』\n\
+Suwako!!!\n\
+It's me, Frogger!!\n\
+from the hit PS1 game\n\
+'Frogger'!!\n\
+which may or may not\n\
+be fully titled:\n\
+'Frogger: He's Back!'\n\
 \n\
-The Super Mario 64 Team"))
+To unlock green reimu,\n\
+you'll have to collect\n\
+all 2401 coins in this \n\
+game.\n\
+Then complete every\n\
+stage in \n\
+Frogger: He's Back!\n\
+on a twitch stream.\n\
+Be sure to come back\n\
+here in a week, you do\n\
+not want to \n\
+disappoint me."))
 
 DEFINE_DIALOG(DIALOG_162, 1, 4, 30, 200, _("\
 No, no, no! Not you\n\
@@ -2011,7 +1964,7 @@ again! I'm in a great\n\
 hurry, can't you see?\n\
 \n\
 I've no time to squabble\n\
-over Stars. Here, have it.\n\
+over Frogs. Here, have it.\n\
 I never meant to hide it\n\
 from you...\n\
 It's just that I'm in such\n\
@@ -2022,12 +1975,12 @@ Owww! Let me go!"))
 DEFINE_DIALOG(DIALOG_163, 1, 5, 30, 200, _("\
 Noooo! You've really\n\
 beaten me this time,\n\
-Mario! I can't stand\n\
+Suwako! I can't stand\n\
 losing to you!\n\
 \n\
 My troops...worthless!\n\
 They've turned over all\n\
-the Power Stars! What?!\n\
+the Power Frogs! What?!\n\
 There are 120 in all???\n\
 \n\
 Amazing! There were some\n\
@@ -2047,7 +2000,7 @@ smokin'!\n\
 Buwaa ha ha!"))
 
 DEFINE_DIALOG(DIALOG_164, 1, 4, 30, 200, _("\
-Mario! What's up, pal?\n\
+Suwako! What's up, pal?\n\
 I haven't been on the\n\
 slide lately, so I'm out\n\
 of shape.\n\
@@ -2073,17 +2026,49 @@ I'm out training now,\n\
 so come back later.\n\
 //--Koopa the Quick"))
 
-DEFINE_DIALOG(DIALOG_167, 1, 4, 30, 200, _("\
-Princess Toadstool's\n\
-castle is just ahead.\n\
+DEFINE_DIALOG(DIALOG_167, 1, 6, 30, 200, _("\
+Hi, welcome to \n\
+Super Suwako 64. A hack\n\
+commissioned by \n\
+NegativeMan.\n\
 \n\
 \n\
-Press [A] to jump, [Z] to\n\
-crouch, and [B] to punch,\n\
-read a sign, or grab\n\
-something.\n\
-Press [B] again to throw\n\
-something you're holding."))
+This is just a straight\n\
+forward vanilla hack of\n\
+SM64, with some \n\
+aesthetic changes \n\
+along the way.\n\
+\n\
+The only gameplay changes are\n\
+now the 100 Coin Frog is \n\
+now only 75 coins. Will make\n\
+getting those last few \n\
+in the late game much easier\n\
+\n\
+Wanna pay a big shout out\n\
+to fine hacking crew over\n\
+at SimpleFlips' discord\n\
+for getting me through\n\
+the hardest parts of this\n\
+romhack.\n\
+Special thanks to \n\
+MagicalPoptart for\n\
+doing the voices that\n\
+I couldn't easily replace.\n\
+\n\
+\n\
+Extra models and assets\n\
+from the Sprite & Models'\n\
+Resource. Anything else \n\
+has been edited or \n\
+created by me,\n\
+Gamebun.\n\
+I hope I got everything \n\
+checked and that everything \n\
+is working fine for \n\
+you as it has for me. \n\
+\n\
+Have fun!!"))
 
 DEFINE_DIALOG(DIALOG_168, 1, 5, 30, 200, _("\
 Hey! Knock it off! That's\n\

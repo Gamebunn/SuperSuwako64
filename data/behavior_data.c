@@ -3396,7 +3396,7 @@ const BehaviorScript bhvShallowWaterWave[] = {
     OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
     DISABLE_RENDERING(),
     BEGIN_REPEAT(5),
-        SPAWN_WATER_DROPLET(&gShallowWaterWaveDropletParams),
+        SPAWN_WATER_DROPLET(&sShallowWaterWaveDropletParams),
     END_REPEAT_CONTINUE(),
     DELAY(1),
     PARENT_BIT_CLEAR(oActiveParticleFlags, ACTIVE_PARTICLE_SHALLOW_WATER_WAVE),
@@ -3411,7 +3411,7 @@ const BehaviorScript bhvShallowWaterSplash[] = {
     OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
     DISABLE_RENDERING(),
     BEGIN_REPEAT(18),
-        SPAWN_WATER_DROPLET(&gShallowWaterSplashDropletParams),
+        SPAWN_WATER_DROPLET(&sShallowWaterSplashDropletParams),
     END_REPEAT_CONTINUE(),
     CALL_NATIVE(bhv_shallow_water_splash_init),
     DELAY(1),
@@ -3539,19 +3539,19 @@ const BehaviorScript bhvUnlockDoorStar[] = {
     END_LOOP(),
 };
 
-const BehaviorScript bhvInstantActiveWarp[] = {
+const BehaviorScript bhvWarps60[] = {
     BREAK(),
 };
 
-const BehaviorScript bhvAirborneWarp[] = {
+const BehaviorScript bhvWarps64[] = {
     BREAK(),
 };
 
-const BehaviorScript bhvHardAirKnockBackWarp[] = {
+const BehaviorScript bhvWarps68[] = {
     BREAK(),
 };
 
-const BehaviorScript bhvSpinAirborneCircleWarp[] = {
+const BehaviorScript bhvWarps6C[] = {
     BREAK(),
 };
 
@@ -3559,15 +3559,15 @@ const BehaviorScript bhvDeathWarp[] = {
     BREAK(),
 };
 
-const BehaviorScript bhvSpinAirborneWarp[] = {
+const BehaviorScript bhvWarps74[] = {
     BREAK(),
 };
 
-const BehaviorScript bhvFlyingWarp[] = {
+const BehaviorScript bhvWarps78[] = {
     BREAK(),
 };
 
-const BehaviorScript bhvPaintingStarCollectWarp[] = {
+const BehaviorScript bhvWarps7C[] = {
     BREAK(),
 };
 
@@ -3575,23 +3575,23 @@ const BehaviorScript bhvPaintingDeathWarp[] = {
     BREAK(),
 };
 
-const BehaviorScript bhvAirborneDeathWarp[] = {
+const BehaviorScript bhvWarps84[] = {
     BREAK(),
 };
 
-const BehaviorScript bhvAirborneStarCollectWarp[] = {
+const BehaviorScript bhvWarps88[] = {
     BREAK(),
 };
 
-const BehaviorScript bhvLaunchStarCollectWarp[] = {
+const BehaviorScript bhvWarps8C[] = {
     BREAK(),
 };
 
-const BehaviorScript bhvLaunchDeathWarp[] = {
+const BehaviorScript bhvWarps90[] = {
     BREAK(),
 };
 
-const BehaviorScript bhvSwimmingWarp[] = {
+const BehaviorScript bhvWarps94[] = {
     BREAK(),
 };
 
@@ -5563,7 +5563,7 @@ const BehaviorScript bhvMrBlizzard[] = {
     SET_HOME(),
     SET_OBJ_PHYSICS(/*Wall hitbox radius*/ 30, /*Gravity*/ -400, /*Bounciness*/ 0, /*Drag strength*/ 1000, /*Friction*/ 1000, /*Buoyancy*/ 200, /*Unused*/ 0, 0),
     CALL_NATIVE(bhv_mr_blizzard_init),
-    SET_FLOAT(oMrBlizzardScale, 1),
+    SET_FLOAT(oMrBlizzardUnkF4, 1),
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_mr_blizzard_update),
     END_LOOP(),

@@ -8,7 +8,7 @@ Gfx *geo_update_held_mario_pos(s32 run, UNUSED struct GraphNode *node, Mat4 mtx)
     if (run == TRUE) {
         sp1C = (struct Object *) gCurGraphNodeObject;
         if (sp1C->prevObj != NULL) {
-            create_transformation_from_matrices(sp20, mtx, *gCurGraphNodeCamera->matrixPtr);
+            create_transformation_from_matrices(sp20, mtx, gCurGraphNodeCamera->matrixPtr);
             obj_update_pos_from_parent_transformation(sp20, sp1C->prevObj);
             obj_set_gfx_pos_from_pos(sp1C->prevObj);
         }
@@ -22,8 +22,8 @@ void bhv_bobomb_anchor_mario_loop(void) {
 
 void king_bobomb_act_0(void) {
 #ifndef VERSION_JP
-    o->oForwardVel = 0.0f;
-    o->oVelY = 0.0f;
+    o->oForwardVel = 0;
+    o->oVelY = 0;
 #endif
     if (o->oSubAction == 0) {
         cur_obj_become_intangible();
@@ -41,12 +41,11 @@ void king_bobomb_act_0(void) {
     }
 }
 
-s32 mario_is_far_below_object(f32 arg0) {
-    if (arg0 < o->oPosY - gMarioObject->oPosY) {
-        return TRUE;
-    } else {
-        return FALSE;
-    }
+int mario_is_far_below_object(f32 arg0) {
+    if (arg0 < o->oPosY - gMarioObject->oPosY)
+        return 1;
+    else
+        return 0;
 }
 
 void king_bobomb_act_2(void) {
@@ -78,7 +77,7 @@ void king_bobomb_act_2(void) {
         o->oAction = 3;
     if (mario_is_far_below_object(1200.0f)) {
         o->oAction = 0;
-        stop_background_music(SEQUENCE_ARGS(4, SEQ_EVENT_BOSS));
+        stop_background_music(SEQUENCE_ARGS(4, SEQ_STREAMED_NEWBOSS));
     }
 }
 
@@ -133,7 +132,7 @@ void king_bobomb_act_1(void) {
         o->oAction = 2;
     if (mario_is_far_below_object(1200.0f)) {
         o->oAction = 0;
-        stop_background_music(SEQUENCE_ARGS(4, SEQ_EVENT_BOSS));
+        stop_background_music(SEQUENCE_ARGS(4, SEQ_STREAMED_NEWBOSS));
     }
 }
 
@@ -190,12 +189,12 @@ void king_bobomb_act_7(void) {
 
 void king_bobomb_act_8(void) {
     if (o->oTimer == 60)
-        stop_background_music(SEQUENCE_ARGS(4, SEQ_EVENT_BOSS));
+        stop_background_music(SEQUENCE_ARGS(4, SEQ_STREAMED_NEWBOSS));
 }
 
-void king_bobomb_act_4(void) { // bobomb been thrown
+void king_bobomb_act_4() { // bobomb been thrown
     if (o->oPosY - o->oHomeY > -100.0f) { // not thrown off hill
-        if (o->oMoveFlags & OBJ_MOVE_LANDED) {
+        if (o->oMoveFlags & 1) {
             o->oHealth--;
             o->oForwardVel = 0;
             o->oVelY = 0;
@@ -207,11 +206,11 @@ void king_bobomb_act_4(void) { // bobomb been thrown
         }
     } else {
         if (o->oSubAction == 0) {
-            if (o->oMoveFlags & OBJ_MOVE_ON_GROUND) {
+            if (o->oMoveFlags & 2) {
                 o->oForwardVel = 0;
                 o->oVelY = 0;
                 o->oSubAction++;
-            } else if (o->oMoveFlags & OBJ_MOVE_LANDED)
+            } else if (o->oMoveFlags & 1)
                 cur_obj_play_sound_2(SOUND_OBJ_KING_BOBOMB);
         } else {
             if (cur_obj_init_animation_and_check_if_near_end(10))
@@ -221,7 +220,7 @@ void king_bobomb_act_4(void) { // bobomb been thrown
     }
 }
 
-void king_bobomb_act_5(void) { // bobomb returns home
+void king_bobomb_act_5() { // bobomb returns home
     switch (o->oSubAction) {
         case 0:
             if (o->oTimer == 0)
@@ -257,7 +256,7 @@ void king_bobomb_act_5(void) { // bobomb returns home
         case 3:
             if (mario_is_far_below_object(1200.0f)) {
                 o->oAction = 0;
-                stop_background_music(SEQUENCE_ARGS(4, SEQ_EVENT_BOSS));
+                stop_background_music(SEQUENCE_ARGS(4, SEQ_STREAMED_NEWBOSS));
             }
             if (cur_obj_can_mario_activate_textbox_2(500.0f, 100.0f))
                 o->oSubAction++;
